@@ -9,6 +9,13 @@ app.use(express.json());
 const HORIZON_URL = 'https://horizon.stellar.org';
 const NETWORK_PASSPHRASE = StellarSDK.Networks.PUBLIC;
 
+// home
+app.get('/api', (req, res) => {
+  res.json({
+    success: true,
+  });
+});
+
 // CREATE PAYMENT transaction (returns signed XDR)
 app.post('/api/create-payment', async (req, res) => {
   try {
