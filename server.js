@@ -10,7 +10,7 @@ const HORIZON_URL = 'https://horizon.stellar.org';
 const NETWORK_PASSPHRASE = StellarSDK.Networks.PUBLIC;
 
 // home
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   res.json({
     success: true,
   });
