@@ -9,15 +9,16 @@ app.use(express.json());
 const HORIZON_URL = 'https://horizon.stellar.org';
 const NETWORK_PASSPHRASE = StellarSDK.Networks.PUBLIC;
 
-// home
+// home route
 app.get('/', (req, res) => {
   res.json({
     success: true,
+    message: "Stellar API Service"
   });
 });
 
 app.get('/api', (req, res) => {
-  res.json({ message: 'Hello from Express on Vercel!' });
+  res.json({ success: true, message: 'Stellar API Service' });
 });
 
 // CREATE PAYMENT transaction (returns signed XDR)
