@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/api', (req, res) => {
+  res.json({ message: 'Hello from Express on Vercel!' });
+});
+
 // CREATE PAYMENT transaction (returns signed XDR)
 app.post('/api/create-payment', async (req, res) => {
   try {
@@ -189,6 +193,9 @@ app.post('/api/create-trustline', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3002;
+
 app.listen(PORT, () => {
   console.log(`Stellar service running on port ${PORT}`);
 });
+
+module.exports = app;

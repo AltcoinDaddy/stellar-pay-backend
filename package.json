@@ -2,9 +2,9 @@
   "name": "stellar-service",
   "version": "1.0.0",
   "description": "Stellar SDK service for transaction signing",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,5 +15,8 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "stellar-sdk": "^13.1.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^5.1.14"
   }
 }
